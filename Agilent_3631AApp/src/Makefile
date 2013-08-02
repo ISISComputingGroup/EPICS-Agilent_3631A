@@ -16,11 +16,11 @@ DBD += Agilent_3631A.dbd
 Agilent_3631A_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#Agilent_3631A_DBD += xxx.dbd
+Agilent_3631A_DBD += devIocStats.dbd
 
 # Add all the support libraries needed by this IOC
 #Agilent_3631A_LIBS += xxx
-Agilent_3631A_LIBS +=  lvDCOMSupport asyn autosave
+Agilent_3631A_LIBS +=  lvDCOMSupport asyn autosave devIocStats
 Agilent_3631A_SYS_LIBS_WIN32 += msxml2
 
 # Agilent_3631A_registerRecordDeviceDriver.cpp derives from Agilent_3631A.dbd
