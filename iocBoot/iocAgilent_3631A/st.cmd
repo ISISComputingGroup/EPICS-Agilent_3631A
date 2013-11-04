@@ -18,7 +18,7 @@ lvDCOMConfigure("frontpanel", "frontpanel", "$(TOP)/Agilent_3631AApp/protocol/ag
 #lvDCOMConfigure("frontpanel", "frontpanel", "$(TOP)/Agilent_3631AApp/protocol/agilent_3631A.xml", "", 6)
 
 dbLoadRecords("db/Agilent3631A.db","P=$(IOCNAME):")
-#dbLoadRecords("$(IOCSTATS_DB)","IOC=$(IOCNAME)")
+dbLoadRecords("$(IOCSTATS_DB)","IOC=$(IOCNAME)")
 
 cd ${TOP}/iocBoot/${IOC}
 iocInit
