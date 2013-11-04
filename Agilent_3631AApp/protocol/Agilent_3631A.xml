@@ -23,11 +23,11 @@
       </param>
       <param name="Current_Setpoint" type="float64">
         <read method="GCV" target="Current Setpoint"/>
-        <set method="SCV" extint="false" target="Current Setpoint"/>
+        <set method="SCV" extint="false" target="Current Setpoint" post_button="Set Current" />
       </param>
       <param name="Voltage_Setpoint" type="float64">
         <read method="GCV" target="Voltage Setpoint"/>
-        <set method="SCV" extint="false" target="Voltage Setpoint"/>
+        <set method="SCV" extint="false" target="Voltage Setpoint" post_button="Set Voltage" />
       </param>
       <param name="Next_Output" type="boolean">
         <items>
@@ -50,6 +50,21 @@
         </items>
         <read method="GCV" target="Set Output"/>
         <set method="SCV" extint="false" target="Set Output"/>
+      </param>
+      <param name="Set_System_To:" type="enum">
+        <items>
+          <!--Ring/Enum names could not be extracted from LabVIEW - you will need to add them manually if required-->
+          <item name="Value-0" value="0"/>
+        </items>
+        <read method="GCV" target="Set System To:"/>
+        <set method="SCV" extint="false" target="Set System To:" post_button="Set Remote Status"/>
+      </param>
+      <param name="Set_Remote_Status" type="boolean">
+        <items>
+          <item name="Set" value="0"/>
+        </items>
+        <read method="GCV" target="Set Remote Status"/>
+        <set method="SCV" extint="false" target="Set Remote Status"/>
       </param>
     </vi>
   </section>

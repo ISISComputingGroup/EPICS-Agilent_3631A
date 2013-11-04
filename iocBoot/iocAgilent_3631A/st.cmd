@@ -14,8 +14,11 @@ cd ${TOP}
 dbLoadDatabase "dbd/Agilent_3631A.dbd"
 Agilent_3631A_registerRecordDeviceDriver pdbbase
 
-#dbLoadRecords("db/Agilent_3631A.db","P=$(IOCNAME)")
-dbLoadRecords("$(IOCSTATS_DB)","IOC=$(IOCNAME)")
+lvDCOMConfigure("frontpanel", "frontpanel", "$(TOP)/Agilent_3631AApp/protocol/agilent_3631A.xml", "ndxchipir", 6, "", "spudulike", "reliablebeam")
+#lvDCOMConfigure("frontpanel", "frontpanel", "$(TOP)/Agilent_3631AApp/protocol/agilent_3631A.xml", "", 6)
+
+dbLoadRecords("db/Agilent3631A.db","P=$(IOCNAME):")
+#dbLoadRecords("$(IOCSTATS_DB)","IOC=$(IOCNAME)")
 
 cd ${TOP}/iocBoot/${IOC}
 iocInit

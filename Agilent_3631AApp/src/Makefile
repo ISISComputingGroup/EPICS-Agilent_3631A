@@ -14,6 +14,7 @@ DBD += Agilent_3631A.dbd
 
 # Agilent_3631A.dbd will be made up from these files:
 Agilent_3631A_DBD += base.dbd
+Agilent_3631A_DBD += lvDCOM.dbd
 
 # Include dbd files from all support applications:
 Agilent_3631A_DBD += devIocStats.dbd

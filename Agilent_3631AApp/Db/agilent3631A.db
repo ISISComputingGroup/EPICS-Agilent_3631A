@@ -1,0 +1,102 @@
+record(stringin, "$(P)MESSAGE")
+{
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn(frontpanel,0,0)Message")
+    field(SCAN, ".1 second")
+}
+
+record(ai, "$(P)CURRENT")
+{
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn(frontpanel,0,0)Current")
+    field(PREC, "3")
+    field(SCAN, ".1 second")
+}
+
+record(ao, "$(P)CURRENT:SP")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn(frontpanel,0,0)Current_Setpoint")
+}
+
+record(ai, "$(P)CURRENT:SP:RBV")
+{
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn(frontpanel,0,0)Current_Setpoint")
+    field(PREC, "3")
+    field(SCAN, ".1 second")
+}
+
+record(ai, "$(P)VOLTAGE")
+{
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn(frontpanel,0,0)Voltage")
+    field(PREC, "3")
+    field(SCAN, ".1 second")
+}
+
+record(ao, "$(P)VOLTAGE:SP")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn(frontpanel,0,0)Voltage_Setpoint")
+}
+
+record(ai, "$(P)VOLTAGE:SP:RBV")
+{
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn(frontpanel,0,0)Voltage_Setpoint")
+    field(PREC, "3")
+    field(SCAN, ".1 second")
+}
+
+record(bi, "$(P)OUTPUT_ON")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn(frontpanel,0,0)Output")
+    field(SCAN, ".1 second")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bo, "$(P)OUTPUT_ON:SP")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn(frontpanel,0,0)Next_Output")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(P)OUTPUT_ON:SP:RBV")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn(frontpanel,0,0)Next_Output")
+    field(SCAN, ".1 second")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(P)SET_OUTPUT")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn(frontpanel,0,0)Set_Output")
+    field(SCAN, ".1 second")
+    field(ZNAM, "Set")
+    field(ONAM, "")
+}
+
+record(bo, "$(P)SET_OUTPUT:SP")
+{
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn(frontpanel,0,0)Set_Output")
+    field(ZNAM, "Set")
+    field(ONAM, "")
+}
+
+record(bi, "$(P)SET_OUTPUT:SP:RBV")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn(frontpanel,0,0)Set_Output")
+    field(SCAN, ".1 second")
+    field(ZNAM, "Set")
+    field(ONAM, "")
+}
